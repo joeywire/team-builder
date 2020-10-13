@@ -32,6 +32,12 @@ function App() {
       location: formData.location,
       role: formData.role
     }
+
+    if (!newMember.name || !newMember.email || !newMember.location || !newMember.role){
+      alert('Invalid Input detected - Make sure you complete the Form before submitting!')
+      return
+    }
+
     setTeamMembers([...teamMembers, newMember]);
     setFormData(initalFormData);
   }

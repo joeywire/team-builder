@@ -15,7 +15,7 @@ function Form(props) {
     }
 
     return (
-        <div>
+        <div className="Form">
             <h2>Add a Team Member!</h2>
             <form className="form-container" onSubmit={onSubmit}>
                 <label>Name:
@@ -59,7 +59,7 @@ function Form(props) {
                     </select>
                 </label>
                 <div className='submit'>
-                    <button>submit</button>
+                    <button>Submit</button>
                 </div>
             </form>
         </div>

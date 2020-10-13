@@ -8,11 +8,27 @@
 .Form {
   background-color: whitesmoke;
   color: black;
-  width: 75%;
+  width: 30rem;
   margin: 5% auto;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.form-container {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-flow: column nowrap;
+}
+
+.form-container label {
+  margin-bottom: .7rem;
+}
+
+.submit button {
+  border: 1px solid yellowgreen;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: darkcyan;
 }
 
 .member-container {
