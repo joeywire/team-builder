@@ -1,19 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Form from './components/Form';
 import TeamMemeber from './components/TeamMember'
 import teamData from './data'
-//Import TeamMemberData
-
 import './App.css';
 
+const initalFormData = {
+  name: "",
+  email: "",
+  location: "",
+  role: ""
+}
+
+
+
 function App() {
-  console.log(teamData);
+  
+  const [teamMembers, setTeamMembers] = useState(teamData);
+  const [formData, setFormData] = useState(initalFormData);
+
+  const updateForm = (name, value) => {
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+  }
+
+  const submitForm = () => {
+    const newMember = {
+      name: formData.name,
+      email: formData.email,
+      location: formData.location,
+      role: formData.role
+    }
+    setTeamMembers([...teamMembers, newMember]);
+    setFormData(initalFormData);
+  }
+
   return (
     <div className="App">
       <h1>Team Builder APP</h1>
-      <Form />
+      <Form 
+        values={formData}
+        update={updateForm}
+        submit={submitForm}
+      />
       <div className='member-container'>
-        {teamData.map((member) => {
+        {teamMembers.map((member) => {
           return <TeamMemeber 
           name={member.name} 
           role={member.role}
