@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  background-color: darkslategray;
+  color: white;
+  padding: 5% 0;
+}
+
+.Form {
+  background-color: whitesmoke;
+  color: black;
+  width: 30rem;
+  margin: 5% auto;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form-container label {
+  margin-bottom: .7rem;
+}
+
+.submit button {
+  border: 1px solid yellowgreen;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: darkcyan;
+}
+
+.member-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.TeamMember {
+  background: rgb(247, 235, 215);
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border: 2px solid yellowgreen;
+  padding: 2%;
+  width: 23%;
+  margin-bottom: 2%;
+}
+
+
+
