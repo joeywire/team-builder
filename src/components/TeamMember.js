@@ -1,13 +1,16 @@
 import React from 'react';
 import '../App.css';
 
-function TeamMember() {
-  return (
-    <div className="TeamMember">
-      <h3>Team Member:</h3>
-      {/* Add details here when available */}
-    </div>
-  );
+function TeamMember(props) {
+    const { name, role, email, location} = props
+    return (
+        <div className="TeamMember">
+            <h3>Team Member: {name}</h3>
+            <h4>Role: {role}</h4>
+            <p>Email: {email}</p>
+            <p>Location: {location}</p>
+        </div>
+    );
 }
 
 export default TeamMember;
